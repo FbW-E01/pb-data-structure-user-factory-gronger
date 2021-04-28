@@ -15,3 +15,30 @@ const userDataDump = [
   "D,Cheesedude51,1951,Users",
   "E,cron,,System",
 ];
+
+function toObject (dataDumpInfo) {
+  let arrayOfUserObjects = [];
+  for (i = 0; i < userDataDump.length; i++) {
+    const text = userDataDump[i];
+    let splitText = text.split(",");
+    let myObject = {id: splitText[0], name: splitText[1], dob: splitText[2], departments: splitText[3]};
+  //   let splitArrays = userDataDump.splice(" ");
+  //   arrayOfUserObjects = splitArrays[i];
+    console.log(arrayOfUserObjects);
+// How does JS know that the dob should be empty if no number is given. If "user" is in position [2], why does JS (correctly) assign it to 'departments' and not 'dob'?
+}
+  return 0;
+
+};
+
+console.log(toObject(userDataDump));
+
+
+// split each array into smaller strings?
+// assign each part of separated strings to properties ????
+// idfk 
+
+// loop thru Array
+// look at each line / Stringsplit string into Array
+// use parts of array to create Object
+// TouchEvent.apply.apply. ???
